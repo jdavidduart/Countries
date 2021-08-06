@@ -2,7 +2,7 @@
 
 $font:'Atkinson Hyperlegible', sans-serif;
 .navbarWrap{
-    background-color: lightblue;
+    background-color: rgb(36, 41, 61);
     width: 60%;
     margin-left: auto;
     margin-right: auto;
@@ -13,20 +13,14 @@ $font:'Atkinson Hyperlegible', sans-serif;
     align-items: center;
     grid-template-columns: 33% 33% 33%;
 }
-.titleNav{/* 
-    background-color: khaki;
-    padding-left: 2rem;
-    display: flex;
-    position: relative;
-    font-size: 2rem; */
+.titleNav{
     position: relative;
     bottom: 0.2rem;
-    color: khaki;
     background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-size: 2rem;
+    font-size: 2.3rem;
     animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
 
     @keyframes reveal {
@@ -58,7 +52,7 @@ $font:'Atkinson Hyperlegible', sans-serif;
     outline: none;
     &:focus{
         border: none;
-        border: 1px solid rgb(0, 255, 0);
+        border: 1px solid rgb(0, 102, 255);
              
         
     }
@@ -67,16 +61,17 @@ $font:'Atkinson Hyperlegible', sans-serif;
 
     & label{
         margin-right: 0.3rem;
+        color: white;
     }
     & button{
         all: unset;
-        background-color: lightgreen;
+        background-color: lightgrey;
         margin: 0 0.3rem;
         padding: .5rem;
         border-radius: 5px;
         cursor: pointer;
         &:hover{
-            background-color: lightgrey;
+            background-color: rgb(243, 243, 243);
         }
 
     }
@@ -87,17 +82,20 @@ $font:'Atkinson Hyperlegible', sans-serif;
     margin: 0 0.3rem;
     position: relative;
     top: 0.5rem;
+    cursor: pointer;
 }
 
 @media (max-width: 1600px){
     .navbarWrap{
         width: 100%;
+        border-radius: unset;
+        margin-top: 0;
     }
 }
 
 @media (max-width: 1000px){
    .navbarWrap{
-       margin-top: 0;
+       
        display: flex;
        flex-direction: column;
    }
