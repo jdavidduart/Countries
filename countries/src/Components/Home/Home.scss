@@ -1,0 +1,24 @@
+.homeWrap{
+    
+    width: 60%;
+    margin: 2rem auto 3rem auto;
+}
+
+.cardsContainer{
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: repeat(auto-fill, minmax(13rem,1fr));
+    
+}
+
+@media (max-width: 1300px){
+    .homeWrap{
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px){
+    .cardsContainer{
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+$font:'Nunito Sans', sans-serif;;
+
+
+.cardWrap{
+    width: 13rem;
+    height: auto;
+    border-radius: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 20px 2px #d0d0d0;
+    padding-bottom: 1rem;
+    font-family: $font;
+    cursor: pointer;
+}
+
+.cardInfo{
+    & img{
+        width: 13rem;
+        height: 139px;
+        border-radius: 0.5rem 0.5rem 0 0;
+        border-bottom: 3px solid rgb(106, 122, 185);
+    }
+}
+
+.cardTitle{
+    font-family: $font;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    margin-top: 0.5rem;
+    color: rgb(36, 41, 61);
+}
+
+
