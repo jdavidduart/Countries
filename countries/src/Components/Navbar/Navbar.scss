@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+
+$font:'Atkinson Hyperlegible', sans-serif;
+.navbarWrap{
+    background-color: lightblue;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    display: grid;
+    grid-auto-rows: 4rem;
+    margin-top: 2rem;
+    align-items: center;
+    grid-template-columns: 33% 33% 33%;
+}
+.titleNav{/* 
+    background-color: khaki;
+    padding-left: 2rem;
+    display: flex;
+    position: relative;
+    font-size: 2rem; */
+    position: relative;
+    bottom: 0.2rem;
+    color: khaki;
+    background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2rem;
+    animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+
+    @keyframes reveal {
+        80%{
+            letter-spacing: 8px;
+        }
+        100% {
+            background-size: 300% 300%;
+        }
+    }
+
+    @keyframes glow {
+        40% {
+            text-shadow: 0 0 8px #fff;
+        }
+    }
+
+}
+  
+.search{
+    height: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid lightcyan;
+    font-size: 1rem;
+    font-family: $font;
+    padding: 0 0.5rem;
+    transition: all .3s ease;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+    outline: none;
+    &:focus{
+        border: none;
+        border: 1px solid rgb(0, 255, 0);
+             
+        
+    }
+}
+.filtersWrap{
+
+    & label{
+        margin-right: 0.3rem;
+    }
+    & button{
+        all: unset;
+        background-color: lightgreen;
+        margin: 0 0.3rem;
+        padding: .5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover{
+            background-color: lightgrey;
+        }
+
+    }
+}
+.orderAlp{
+    height: 1.5rem;
+    width: 1.5rem;
+    margin: 0 0.3rem;
+    position: relative;
+    top: 0.5rem;
+}
+
+@media (max-width: 1600px){
+    .navbarWrap{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1000px){
+   .navbarWrap{
+       margin-top: 0;
+       display: flex;
+       flex-direction: column;
+   }
+   .titleNav{
+       margin: 1rem;
+       font-size: 3rem;
+   }
+
+   .search{
+       margin: 0 0 1rem 0;
+       width: 80%;
+   }
+   .filtersWrap{
+       margin-bottom: 1rem;
+   }
+}
