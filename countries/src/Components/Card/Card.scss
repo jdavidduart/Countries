@@ -30,8 +30,17 @@ $font:'Nunito Sans', sans-serif;;
     font-weight: bolder;
     font-size: 1.3rem;
     margin-bottom: 0.3rem;
-    margin-top: 0.5rem;
-    color: rgb(36, 41, 61);
+    margin-top: 0;
+    padding-bottom: .5rem;
+    color: rgb(106, 122, 185);
+    border-bottom: 1px solid #d8d8d8;
+    margin-bottom: 1rem;
 }
 
+.cardDetail{
+    padding: .5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
