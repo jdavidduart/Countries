@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 
-$font:'Nunito Sans', sans-serif;;
-$easing: cubic-bezier(.25,1.7,.35,.8);
-$duration: 0.5s;
-
+$font:'Nunito Sans', sans-serif;
+$blueNav:rgb(36, 41, 61);
 .cardWrap{
     width: 13rem;
     border-radius: 0.5rem;
@@ -21,6 +19,7 @@ $duration: 0.5s;
     &:hover{
         overflow: visible;
         transform: scale(1.04);
+        background-color: $blueNav;
     }
 }
 
@@ -31,7 +30,6 @@ $duration: 0.5s;
         width: 13rem;
         height: 139px;
         border-radius: 0.5rem 0.5rem 0 0;
-        border-bottom: 3px solid rgb(106, 122, 185);
     }
 
 }
@@ -83,12 +81,14 @@ $duration: 0.5s;
     top: -5%;
     left: 35%;
     z-index: 2;
-    box-shadow: 0 0 10px 2px #888888;
     width: 4rem;
     height: 4rem;
-    border-radius: 5rem;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 2px #fff;
     border-bottom: 0;
+    object-fit: cover;
 }
+
 @keyframes example {
     0%   {left:0px; top:0px;}
     75%  {left:0px; top:5px;}
@@ -105,5 +105,9 @@ $duration: 0.5s;
             width: 10rem;
             height: 139px;
         }
+    }
+
+    .cardWrap:hover .cardInfo img{
+        left: 30%;
     }
 }
