@@ -21,7 +21,7 @@ function App() {
       async function getCountries(){            
           try {
               const results= await axios.get('https://restcountries.eu/rest/v2/all');
-              setAllInfo({...allInfo, countries:results.data, loading:false, currentInfo:results.data})
+              setAllInfo(state => ({...state, countries:results.data, loading:false, currentInfo:results.data}))
           } catch (error) {
               console.error(error)
           }

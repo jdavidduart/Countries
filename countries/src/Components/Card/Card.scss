@@ -20,6 +20,7 @@ $blueNav:rgb(36, 41, 61);
         overflow: visible;
         transform: scale(1.04);
         background-color: $blueNav;
+        box-shadow: 0 0 10px 2px #8d8d8d;
     }
 }
 
@@ -38,7 +39,7 @@ $blueNav:rgb(36, 41, 61);
 .cardTitle{
     font-family: $font;
     font-weight: bolder;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-top: 0;
     padding-bottom: .5rem;
     color: rgb(106, 122, 185);
@@ -61,6 +62,7 @@ $blueNav:rgb(36, 41, 61);
     transform: translateY(28%);
     transition: .2s ease-in-out;
     background-color: #fff;
+    border-radius: 5px;
 }
   
 .arrowWrap{

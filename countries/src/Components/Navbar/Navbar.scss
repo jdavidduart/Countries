@@ -83,6 +83,10 @@ $font:'Atkinson Hyperlegible', sans-serif;
     position: relative;
     top: 0.5rem;
     cursor: pointer;
+    &:hover{
+        background-color: rgb(243, 243, 243);
+        border-radius: 3px;
+    }
 }
 
 @media (max-width: 1600px){

@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './Home.scss';
 import Card from '../Card/Card';
-import Navbar from '../Navbar/Navbar'
 import Loading from '../Loading/Loading'
 export default function Home({allInfo}){
     if(allInfo.loading === true) return <Loading/>
