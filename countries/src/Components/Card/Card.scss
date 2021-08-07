@@ -1,46 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 
 $font:'Nunito Sans', sans-serif;;
-
+$easing: cubic-bezier(.25,1.7,.35,.8);
+$duration: 0.5s;
 
 .cardWrap{
     width: 13rem;
-    height: auto;
     border-radius: 0.5rem;
     background-color: rgb(255, 255, 255);
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 0 20px 2px #d0d0d0;
-    padding-bottom: 1rem;
     font-family: $font;
     cursor: pointer;
+    transition: transform .3s;
+    display: block;
+    overflow: hidden;
+    position: relative;
+
+    &:hover{
+        overflow: visible;
+        transform: scale(1.04);
+    }
 }
 
 .cardInfo{
+    
     & img{
+        transition: tranform 0.5s;
         width: 13rem;
         height: 139px;
         border-radius: 0.5rem 0.5rem 0 0;
         border-bottom: 3px solid rgb(106, 122, 185);
     }
+
 }
 
 .cardTitle{
     font-family: $font;
     font-weight: bolder;
     font-size: 1.3rem;
-    margin-bottom: 0.3rem;
     margin-top: 0;
     padding-bottom: .5rem;
     color: rgb(106, 122, 185);
     border-bottom: 1px solid #d8d8d8;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+   
+}
+
+.area, .capital{
+    width: 100%;
 }
 
 .cardDetail{
     padding: .5rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: translateY(28%);
+    transition: .2s ease-in-out;
+    background-color: #fff;
+}
+  
+.arrowWrap{
+    width: 2rem;
+    margin: 0 auto;
+    position: relative;
+    animation-name: example;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 
+.cardWrap:hover .cardDetail{
+    transform: translateY(0);
+}
+
+.cardWrap:hover .cardInfo img {
+    transform: translateY(-20%);
+    position: absolute; 
+    top: -5%;
+    left: 35%;
+    z-index: 2;
+    box-shadow: 0 0 10px 2px #888888;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 5rem;
+    border-bottom: 0;
+}
+@keyframes example {
+    0%   {left:0px; top:0px;}
+    75%  {left:0px; top:5px;}
+    100% {left:0px; top:0px;}
+  }
+  
+
+@media (max-width: 600px){
+    .cardWrap{
+        width: 10rem;
+    }
+    .cardInfo{
+        & img{
+            width: 10rem;
+            height: 139px;
+        }
+    }
+}

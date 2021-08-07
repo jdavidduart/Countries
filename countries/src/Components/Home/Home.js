@@ -26,8 +26,8 @@ export default function Home(){
         <div className='homeWrap'>
             <div className='cardsContainer'>
                 {
-                    allInfo.countries.map(country =>(
-                        <Card country={country}/>
+                    allInfo.countries.map( (country, index) =>(
+                        <Card country={country} key={index}/>
                     ))
                 }
             </div>
