@@ -14,12 +14,12 @@ export default function Card ({country}){
             <div className='cardInfo'>
                 <img src={country.flag} alt='flag'></img>
                 <div className='cardDetail'>
-                    <div className='arrowWrap'><FcCollapse className='arrowIcon' onClick={toggleInfo} /></div>
+                    <div className='arrowWrap'><FcCollapse onClick={toggleInfo} /></div>
                     <h3 className='cardTitle'>{country.name}</h3>
                     <div className='capital'>Capital: {country.capital}</div>
-                    <div className='area'><FcLandscape/> {country.area} km<sup>2</sup></div>
-                    <div><FcConferenceCall/> {country.population} Habitants</div>
-                    <div><FcCallback/> +{country.callingCodes[0]}</div>
+                    <div className='area'><FcLandscape className='iconCard'/> {country.area} km<sup>2</sup></div>
+                    <div><FcConferenceCall className='iconCard'/> {country.population} Habitants</div>
+                    <div><FcCallback className='iconCard'/> +{country.callingCodes[0]}</div>
                     
                 </div>
                 

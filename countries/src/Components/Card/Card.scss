@@ -30,6 +30,7 @@ $blueNav:rgb(36, 41, 61);
         width: 13rem;
         height: 139px;
         border-radius: 0.5rem 0.5rem 0 0;
+        object-fit: cover;
     }
 
 }
@@ -69,6 +70,10 @@ $blueNav:rgb(36, 41, 61);
     animation-name: example;
     animation-duration: 1s;
     animation-iteration-count: infinite;
+}
+.iconCard{
+    position: relative;
+    top: 0.1rem;
 }
 
 .cardWrap:hover .cardDetail{
