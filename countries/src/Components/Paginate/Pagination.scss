@@ -1,0 +1,29 @@
+$blueNav:rgb(36, 41, 61);
+
+.pagination {
+    width: auto;
+    margin: 3rem auto 0 auto;
+    align-items: center;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 2rem);
+    justify-content: center;
+}
+
+
+.pagination span {
+    float: left;
+    text-decoration: none;
+    color: $blueNav;
+    border: 1px solid lightgrey;
+    background-color: #fff;
+    padding: 0.5rem 0;
+}
+
+.pagination span.active {
+    color: #fff;
+    background-color: $blueNav;
+    
+}
+
+.pagination span:hover:not(.active) {background-color: lightgray;}
