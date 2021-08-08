@@ -1,18 +1,17 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './Home.scss';
 import Card from '../Card/Card';
 import Loading from '../Loading/Loading'
 import Pagination from '../Paginate/Pagination';
 
 
-export default function Home({allInfo}){
+export default function Home({allInfo, setAllInfo}){
 
-    const [currentPage, setCurrentPage] = useState(1)
     const postsPerPage = 16;
-    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfLastPost = allInfo.currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     let currentPosts = allInfo.currentInfo.slice(indexOfFirstPost, indexOfLastPost);
-    const paginate = pageNumber => setCurrentPage(pageNumber);
+    const paginate = pageNumber => setAllInfo({...allInfo, currentPage: pageNumber});
 
 
     if(allInfo.loading === true) return <Loading/>
@@ -26,7 +25,10 @@ export default function Home({allInfo}){
                             ))
                         }
                 </div>
-                <Pagination postsPerPage={postsPerPage} totalPosts={allInfo.currentInfo.length} paginate={paginate}/>
+                {
+                    allInfo.currentInfo.length === 0 ? <h1>Results not found, try again.</h1> :
+                    <Pagination postsPerPage={postsPerPage} totalPosts={allInfo.currentInfo.length} paginate={paginate}/>
+                }
             </div>
          )
     }

@@ -14,7 +14,7 @@ function App() {
     countries:[],
     currentInfo:[],
     loading:true,
-  
+    currentPage:1
   });
 
   useEffect(()=>{
@@ -35,7 +35,7 @@ function App() {
       <div className='App'>
           <Route exact path='/'>
             <Navbar allInfo={allInfo} setAllInfo={setAllInfo}/>
-            <Home allInfo={allInfo}/>
+            <Home allInfo={allInfo} setAllInfo={setAllInfo}/>
 
           </Route>
       </div>

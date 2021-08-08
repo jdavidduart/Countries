@@ -9,14 +9,14 @@ export default function Navbar({allInfo, setAllInfo}){
             try {
                 setAllInfo({...allInfo, loading:true})
                 const results= await axios.get('https://restcountries.eu/rest/v2/name/' + e.target.value);
-                setAllInfo({...allInfo, currentInfo:results.data, loading:false})
+                setAllInfo({...allInfo, currentInfo:results.data, loading:false, currentPage:1})
             } catch (error) {
                 setAllInfo({...allInfo, currentInfo:[], loading:false})
             }
         }else{
             setAllInfo({...allInfo, loading:true})
             const results= await axios.get('https://restcountries.eu/rest/v2/all' + e.target.value);
-            setAllInfo({...allInfo, currentInfo:results.data, loading: false})
+            setAllInfo({...allInfo, currentInfo:results.data, loading: false, currentPage:1})
         }        
     }
 
