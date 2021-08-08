@@ -105,6 +105,27 @@ $blueNav:rgb(36, 41, 61);
 
 @media (max-width: 600px){
     .cardWrap{
+        width: 12rem;
+    }
+    .cardInfo{
+        & img{
+            width: 12rem;
+            height: 139px;
+        }
+    }
+
+    .cardWrap:hover .cardInfo img{
+        left: 30%;
+    }
+
+    .cardDetail{
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+}
+
+@media (max-width: 450px){
+    .cardWrap{
         width: 10rem;
     }
     .cardInfo{
@@ -114,7 +135,8 @@ $blueNav:rgb(36, 41, 61);
         }
     }
 
-    .cardWrap:hover .cardInfo img{
-        left: 30%;
+    .cardDetail{
+        padding-left: 2px;
+        padding-right: 2px;
     }
 }
