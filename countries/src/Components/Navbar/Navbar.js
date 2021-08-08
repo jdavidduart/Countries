@@ -3,7 +3,8 @@ import './Navbar.scss'
 import axios from 'axios'
 import { FcAlphabeticalSortingAz, FcAlphabeticalSortingZa } from "react-icons/fc";
 export default function Navbar({allInfo, setAllInfo}){
-    
+
+    //busqueda dinamica por cada letra escrita
     async function search(e){
         if(e.target.value.length > 0){
             try {
@@ -14,12 +15,14 @@ export default function Navbar({allInfo, setAllInfo}){
                 setAllInfo({...allInfo, currentInfo:[], loading:false})
             }
         }else{
+            //cuando se borre restablezco la info
             setAllInfo({...allInfo, loading:true})
             const results= await axios.get('https://restcountries.eu/rest/v2/all' + e.target.value);
             setAllInfo({...allInfo, currentInfo:results.data, loading: false, currentPage:1})
         }        
     }
 
+    // filtrados realizados a la información que se esté mostrando
     const orderZ_A=()=>{
         const ordered = allInfo.currentInfo.sort((a,b)=>{
                             if(a.name < b.name) return 1;

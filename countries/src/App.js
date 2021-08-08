@@ -9,7 +9,7 @@ import axios from 'axios'
 import Navbar from './Components/Navbar/Navbar';
 
 function App() {
-
+  //Obtengo la informacíon inicial de las countries
   const [allInfo, setAllInfo]=useState({
     countries:[],
     currentInfo:[],
@@ -29,6 +29,8 @@ function App() {
       getCountries();
 
   },[])
+
+  //renderizo Home y Navbar en la ruta '/' con disponibilidad de escalar aun más el proyecto
 
   return (
     <Router>
