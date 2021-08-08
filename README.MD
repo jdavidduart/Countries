@@ -6,7 +6,7 @@
 <div align='left'> 
 
 <h2>Descripción</h2>
-App de busqueda dinámica de paises con implementación de filtrado y paginado, las herraminetas utilizadas fueron: 
+App de busqueda dinámica de paises con implementación de filtrado, paginado y responsive, las herraminetas utilizadas fueron: 
 <ul>
 <li>React</li>
 <li>Scss</li>
