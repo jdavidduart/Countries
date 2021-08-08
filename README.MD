@@ -13,6 +13,7 @@ App de busqueda dinámica de paises con implementación de filtrado y paginado, 
 <li>Hooks</li>
 <li>Firebase</li>
 <li>GitHub</li>
+<li>HTML</li>
 </ul>
 
 <h3>Deploy:</h3><a>https://countries-5d7ca.web.app/</a>
