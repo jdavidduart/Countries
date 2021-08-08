@@ -16,5 +16,5 @@ App de busqueda dinámica de paises con implementación de filtrado y paginado, 
 <li>HTML</li>
 </ul>
 
-<h3>Deploy:</h3><a>https://countries-5d7ca.web.app/</a>
+<h3>Deploy:</h3><a href='https://countries-5d7ca.web.app/'>https://countries-5d7ca.web.app/</a>
 </div>
